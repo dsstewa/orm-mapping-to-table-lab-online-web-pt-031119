@@ -10,8 +10,14 @@ class Student
   end
 
 self.create_table
-@sql = {:conn => SQLite3::Database.new("db/students.db")}
-
+sql = <<-SQL
+  CREATE TABLE IF NOT EXISTS students (
+  id INTEGER PRIMARY KEY,
+  name TEXT,
+  grade INTEGER
+  )
+SQL
+DB[:conn].execute(sql)
 end
 
 
@@ -23,3 +29,14 @@ end
 end
 
 
+ 
+  def self.create_table
+    sql =  <<-SQL 
+      CREATE TABLE IF NOT EXISTS songs (
+        id INTEGER PRIMARY KEY, 
+        name TEXT, 
+        album TEXT
+        )
+        SQL
+    DB[:conn].execute(sql) 
+  end
