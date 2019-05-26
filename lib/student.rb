@@ -39,6 +39,7 @@ def save
   
   DB[:conn].execute(sql, self.name, self.grade)
   
+
 end
 
 
