@@ -9,7 +9,7 @@ class Student
   end
 
 self.create_table
-@sql = 
+@sql = {:conn => SQLite3::Database.new("db/students.db")}
 
 end
 
