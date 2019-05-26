@@ -6,9 +6,12 @@ class Student
     @name = name
     @grade = grade
     
-    
   end
 
+self.create_table
+
+
+end
 
 
 
