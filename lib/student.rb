@@ -9,7 +9,7 @@ class Student
   end
 
 self.create_table
-
+@sql = 
 
 end
 
