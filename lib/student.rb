@@ -59,12 +59,10 @@ end
   
   
 def self.create(name, grade)
+  binding.pry
   a = Student.new(name,grade)
   a.save
-  
-  
-  
-  
+
 end
   
   
