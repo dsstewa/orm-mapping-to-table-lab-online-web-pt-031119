@@ -21,8 +21,12 @@ sql = <<-SQL
 end
 
 def self.drop_table
+  sql = <<-SQL
   
   
+  
+  
+  DB[:conn].execute(sql)
   
 end
 
